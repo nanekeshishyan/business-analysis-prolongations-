@@ -1,0 +1,41 @@
+The Head of the Client Support Department wants to evaluate how well his team members (account managers) are handling one of their key responsibilities – contract prolongation with clients. He expects an analyst to provide a report on employees’ prolongations for the year 2023.
+
+The company uses two prolongation coefficients:
+
+For projects prolonged in the first month – the ratio of the shipment amount of projects prolonged in the first month after completion to the shipment amount in the final month of all projects that were completed in the previous month.
+
+For projects prolonged in the second month – the ratio of the shipment amount of projects prolonged in the second month to the shipment amount in the final month of projects that were not prolonged in the first month.
+
+In other words, if we want to assess how well a manager achieved prolongations in May, we need to calculate:
+
+The shipment amount of projects that ended in April (for April), and the shipment amount of those projects that ended in April but had shipments in May (for May). The coefficient is the ratio of the second amount to the first.
+
+The shipment amount of projects that ended in March with no shipments in April (for March), and the shipment amount of those projects that ended in March with no shipments in April but with shipments in May (for May). The coefficient is the ratio of the second amount to the first.
+
+Two datasets are available:
+
+prolongations.csv
+
+id – project ID
+
+month – the final month of the project
+
+AM – full name of the responsible account manager (primary data compared to financial_data)
+
+financial_data.csv
+
+id – project ID
+
+Reason for duplicate – reason why rows with the same ID may occur multiple times
+
+Columns with month names – shipment amount of the project in the given month
+
+Account – full name of the responsible account manager
+
+Required:
+
+Calculate prolongation coefficients for each manager and for the department as a whole
+
+for each month
+
+for the entire year
