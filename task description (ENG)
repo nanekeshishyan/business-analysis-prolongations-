@@ -1,41 +1,29 @@
-The Head of the Client Support Department wants to evaluate how well his team members (account managers) are handling one of their key responsibilities – contract prolongation with clients. He expects an analyst to provide a report on employees’ prolongations for the year 2023.
-
+The Head of the Customer Support Department wants to obtain information on how well his employees (account managers) are handling one of their key responsibilities – contract prolongation with clients. From the analyst, he expects to receive a report on employee prolongations for 2023.
 The company uses two prolongation coefficients:
 
-For projects prolonged in the first month – the ratio of the shipment amount of projects prolonged in the first month after completion to the shipment amount in the final month of all projects that were completed in the previous month.
+For projects prolonged in the first month – the ratio of the shipment amount of projects prolonged in the first month after completion to the shipment amount of the last month of realization of all projects completed in the previous month.
 
-For projects prolonged in the second month – the ratio of the shipment amount of projects prolonged in the second month to the shipment amount in the final month of projects that were not prolonged in the first month.
+For projects prolonged in the second month – the ratio of the shipment amount of projects prolonged in the second month to the shipment amount of the last month of projects not prolonged in the first month.
 
-In other words, if we want to assess how well a manager achieved prolongations in May, we need to calculate:
-
-The shipment amount of projects that ended in April (for April), and the shipment amount of those projects that ended in April but had shipments in May (for May). The coefficient is the ratio of the second amount to the first.
-
-The shipment amount of projects that ended in March with no shipments in April (for March), and the shipment amount of those projects that ended in March with no shipments in April but with shipments in May (for May). The coefficient is the ratio of the second amount to the first.
+In other words, if we need to understand how well a manager prolonged in May, we need to calculate:
+The shipment amount of projects completed in April (for April) and the shipment amount of those projects completed in April that also had shipments in May (for May). The coefficient is the ratio of the second amount to the first.
+The shipment amount of projects completed in March that had no shipments in April (for March) and the shipment amount of those projects completed in March that had no shipments in April but had in May (for May). The coefficient is the ratio of the second amount to the first.
 
 Two datasets are available:
 
 prolongations.csv
-
-id – project ID
-
-month – the final month of the project
-
-AM – full name of the responsible account manager (primary data compared to financial_data)
+id – project id
+month – last month of project realization
+AM – full name of the responsible account manager (these data are primary in relation to financial_data)
 
 financial_data.csv
-
-id – project ID
-
-Reason for duplicate – reason why rows with the same ID may occur multiple times
-
-Columns with month names – shipment amount of the project in the given month
-
+id – project id
+Причина дубля – reason why rows with the same id appear multiple times
+Columns with month names – shipment amount of the project in that month
 Account – full name of the responsible account manager
 
 Required:
+Calculate prolongation coefficients for each manager and for the entire department:
+by each month
 
-Calculate prolongation coefficients for each manager and for the department as a whole
-
-for each month
-
-for the entire year
+by year
